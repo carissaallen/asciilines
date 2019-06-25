@@ -65,4 +65,5 @@ _Information about bugs, defects, failing tests, etc._
 
 ## License
 Copyright &copy; 2019 Carissa Allen
+
 Licensed under the MIT License. See [the license](/LICENSE) for more information.
