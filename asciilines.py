@@ -11,7 +11,7 @@ to output (starts out filled with . characters)
 Each subsequent line contains the following commands:
 1. A character to render
 2. A row position to start at (0-based)
-3 A column position to start at (0-based)
+3. A column position to start at (0-based)
 4. Either 'h' for a horizontal line or a 'v' for a vertical line
 5. A length for the rendered line (must be greater than 0)
 """
@@ -30,7 +30,7 @@ def validate_args(num_args):
 
 
 def get_tvg_file():
-    """Accept a TVG file as a command-line argument."""
+    """Accepts a TVG file as a command-line argument."""
     validate_args(len(sys.argv))
     filename = sys.argv[1]
     file = open(filename, "r")
@@ -39,9 +39,39 @@ def get_tvg_file():
     return file_contents
 
 
+def validate_canvas(canvas_size, rows, cols):
+    if len(canvas_size) != 2:
+        print(
+            "Error parsing file. Canvas size must include a row size and column size."
+        )
+        sys.exit()
+    elif rows < 1 or cols < 1:
+        print("Error parsing file. Rows and columns must be a minimum size of 1.")
+        sys.exit()
+
+
+def get_original_canvas():
+    file_contents = get_tvg_file()
+    canvas_size = file_contents[0].split(" ")
+    rows = int(canvas_size[0])
+    cols = int(canvas_size[1])
+    validate_canvas(canvas_size, rows, cols)
+    dots = " . "
+    canvas = [[dots] * cols for i in range(rows)]
+    return canvas
+
+
+def display_canvas(canvas):
+    for row in canvas:
+        for cell in row:
+            print(cell, end="")
+        print()
+
+
 def main():
-    tvg_file = get_tvg_file()
-    print(tvg_file)
+    canvas = get_original_canvas()
+    display_canvas(canvas)
+    print(canvas)
 
 
 if __name__ == "__main__":
