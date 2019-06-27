@@ -57,8 +57,39 @@ should render as:
 ```
 
 ## Build and Run 
+To run this command-line program, first open your terminal and complete the following steps:
+1. First, git clone this asciilines repository: `https://github.com/carissaallen/asciilines.git`
+2. Then, `cd` (change directory) into asciilines.
+3. Finally, enter the following command, replacing `your_file_path.tvg` with your own TVG file:
+```
+python3 asciilines.py your_file_path.tvg
+```
 
 ## Usage
+You may have a TVG file called _test2.tvg_ containing the following input:
+```
+7 7
+A 1 2 h 1
+B 5 2 v 1
+C 2 6 h 1
+D 2 3 v 1
+```
+
+By entering the following command (if asciilines.py is in your current directory):
+```
+python3 asciilines.py tests/test2.tvg
+```
+
+You will get an output that looks like this:
+```
+. . . . . . .
+. . A . . . .
+. . . D . . C
+. . . . . . .
+. . . . . . .
+. . B . . . .
+. . . . . . .
+```
 
 ## Testing
 _Information about bugs, defects, failing tests, etc._
