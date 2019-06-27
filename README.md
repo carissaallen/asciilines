@@ -8,20 +8,6 @@ _The problem description is adapted from Bart Massey's homework assignment found
 
 Create a command-line program that will accept a single .tvg file argument and render the file as ASCII on standard output. Your program may fail on invalid input, but must panic or otherwise display an error in this case.
 
-Here is an example session. The lines beginning with $ were typed by the user, and the other lines indicate program output.
-
-```
-    $ cat tests/test1.tvg
-    3 4
-    * 1 -1 h 5
-    # -1 1 v 5
-    $ python3 asciilines.py tests/test1.tvg
-    .#..
-    *#**
-    .#..
-    $
-```
-
 ### The TVG Format
 A "TVG" file contains "Text Vector Graphics".
 
@@ -40,21 +26,7 @@ A rendering command is a line containing:
 
 The character positions that are part of the rendering command's rendered line should be filled with the rendering character. It is legal for the line to be outside the canvas; only points inside the canvas should be rendered.
 
-A rendering output is produced by executing each of the rendering commands on the canvas. For example, a TVG file containing
-
-```
-3 4
-* 1 -1 h 5
-# -1 1 v 5
-```
-
-should render as:
-
-```
-.#..
-*#**
-.#..
-```
+A rendering output is produced by executing each of the rendering commands on the canvas. 
 
 ## Build and Run 
 To run this command-line program, first open your terminal and complete the following steps:
