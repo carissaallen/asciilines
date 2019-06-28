@@ -30,7 +30,7 @@ A rendering output is produced by executing each of the rendering commands on th
 
 ## Build and Run 
 To run this command-line program, first open your terminal and complete the following steps:
-1. First, git clone this asciilines repository: `https://github.com/carissaallen/asciilines.git`
+1. First, git clone this asciilines repository: `git clone https://github.com/carissaallen/asciilines.git`
 2. Then, `cd` (change directory) into asciilines.
 3. Finally, enter the following command, replacing `your_file_path.tvg` with your own TVG file:
 ```
