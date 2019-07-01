@@ -32,13 +32,13 @@ A rendering output is produced by executing each of the rendering commands on th
 To run this command-line program, first open your terminal and complete the following steps:
 1. First, clone this asciilines repository: `git clone https://github.com/carissaallen/asciilines.git`
 2. Then, `cd` (change directory) into asciilines.
-3. Finally, enter the following command, replacing `your_file_path.tvg` with your own TVG file:
+3. Finally, enter the following command, replacing `your_file_path.tvg` with your own TVG file name:
 ```
 python3 asciilines.py your_file_path.tvg
 ```
 
 ## Usage
-You may have a TVG file called _test2.tvg_ containing the following input:
+Say you have a TVG file named _test2.tvg_ that contains the following input:
 ```
 7 7
 A 1 2 h 1
@@ -62,6 +62,8 @@ You will get an output that looks like this:
 . . B . . . .
 . . . . . . .
 ```
+
+TVG contents will vary, producing unique ASCII outputs.
 
 ## Testing
 _Information about bugs, defects, failing tests, etc._
